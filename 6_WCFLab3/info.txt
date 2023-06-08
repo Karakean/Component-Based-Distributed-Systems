@@ -1,0 +1,38 @@
+1. publikacja informacji o us³udze (self-hosting)		15%
+   proszê udostêpniæ us³ugê z metod¹:
+   string ScalNapisy(string a, string b)
+   i opublikowaæ informacje o niej na lokalnym komputerze
+   na porcie 30703
+2. wyszukiwanie us³ugi						15%
+   nale¿y wyszukaæ opublikowan¹ przez siebie us³ugê i skorzystaæ
+   z niej we w³asnym kliencie
+3. REST: proszê udostêpniæ bezparametrow¹ metodê zwracaj¹c¹	20%
+   zawartoœæ pliku index.xhtml, dostêpn¹ pod adresem
+   <adres serwisu>/index.html i analogicznie plik scripts.js.
+   (serwer hostowany w IIS)
+4. REST: proszê dodatkowo zaimplementowaæ metodê dodaj¹c¹ dwie	15%
+   liczby i zwracaj¹c¹ int pod adresem Dodaj/parametr1/parametr2
+   obs³uguj¹c¹ zapytania typu POST
+5. klient w C# wo³aj¹cy metodê z pkt 4.				15%
+6. routing: klient, router i dwa serwisy implementuj¹ce ten	20%
+   sam interfejs z jedn¹ metod¹ Dodaj, zwracaj¹c¹ sumê swoich
+   parametrów oraz drukuj¹cych dowoln¹ informacjê na konsoli.
+   Jeden z serwisów powinien byæ zapasowy: routing
+   przekazuje wo³ania do pierwszego serwisu, chyba, ¿e ten
+   jest niedostêpny, wtedy do drugiego.
+   Na potrzeby dokumentacji (print screen) uruchomiæ tylko serwis podstawowy,
+   póŸniej obydwa i na koñcu tylko zapasowy. Zamieœciæ wydruk z 4 konsol.
+   serwery i router: self-hosted
+   binding: dowolny
+
+uwaga: wysy³aj¹c kody proszê do³¹czyæ równie¿ plik web.config
+i plik projektu dla zadañ 3 i 4
+
+Uwagi:
+Po zakoñczeniu zadania proszê przes³aæ wszystkie pliki kodu, konfiguracyjne (.cs, .config)
+oraz pliki wszytkich projektów i solution (pliki .csproj i .sln).
+Proszê równie¿ do³¹czyæ skompilowane pliki: exe oraz dll.
+Podstaw¹ oceny s¹ równie¿ przynajmniej cztery screeny z dzia³aj¹cych programów. Zadanie od 1-2 klienta odkrywaj¹cego us³ugê, 3-4 z poprawnego dzia³ania formularza, 5 klienta ³¹cz¹cego siê z us³ug¹ rest i 6 z 4 konsol programu.
+Proszê opró¿niæ foldery Debug i Release zostawiaj¹c jedynie pliki .exe i .dll.
+Proszê równie¿ usun¹æ ukryty folder .vs.
+Pliki nale¿y spakowaæ do archiwum ZIP i wys³aæ na platformie e-nauczanie.

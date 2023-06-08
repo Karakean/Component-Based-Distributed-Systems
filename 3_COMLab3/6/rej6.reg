@@ -1,0 +1,7 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{3F7A6746-5F7C-4A1C-BA61-E2C5C79CC096}]
+@="Klasa2"
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{3F7A6746-5F7C-4A1C-BA61-E2C5C79CC096}\InProcServer32]
+@="C:\\Users\\mipig\\Desktop\\KSR\\COMLab3\\6\\klasac2\\Debug\\klasac2.dll"
+"ThreadingModel"="Both"

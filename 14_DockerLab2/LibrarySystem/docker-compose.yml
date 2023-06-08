@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  rabbit:
+    image: rabbitmq:management
+    ports:
+      - 15672:15672
+      - 5672:5672
+
+  notificationservice:
+    build: ./Library.NotificationService2/
+    ports:
+      - 92:80
+    depends_on:
+      - rabbit
+
+  librarywebapi:
+    build: ./Library.WebApi/
+    ports:
+      - 91:80
+    depends_on:
+      - notificationservice
+
+  libraryweb:
+    build: ./Library.Web/
+    ports:
+      - 90:80
+    depends_on:
+      - librarywebapi
+
+  

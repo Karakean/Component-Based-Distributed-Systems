@@ -1,0 +1,7 @@
+LIBRARY klasa3.dll
+
+EXPORTS
+	DllCanUnloadNow	PRIVATE
+	DllGetClassObject PRIVATE  
+
+

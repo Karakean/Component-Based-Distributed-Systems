@@ -1,0 +1,64 @@
+Programy powinny wykorzystywaæ w³asny deweloperski
+serwer za³o¿ony wczesniej na https://www.cloudamqp.com/
+Ka¿dy proces powinien na pocz¹tku siê
+przedstawiæ, czyli wypisaæ na konsolê kim
+jest, np. "nadawca", "odbiorca 2" itp.
+W celu poprawienia czytelnoœci, aby odró¿niæ
+komendu wypisywane przez program a treœæ
+odebranych/wys³anych wiadomoœci, mo¿na u¿yæ
+klasy ConsoleCol (dostêpna na eNauczanie).
+
+1. nadawca				20%
+wys³anie 10 wiadomoœci
+ze zmieniaj¹c¹ siê treœci¹
+
+2. odbiorca				15%
+wypisanie na konsolê treœci
+wiadomoœci odebranych od nadawcy
+
+3. nag³ówki				10%
+ustawienie w nadawcy i wypisanie
+w odbiorcy dwóch ró¿nych nag³ówków
+w ka¿dej wiadomoœci
+
+4. drugi odbiorca			10%
+konkuruje z pierwszym o wiadomoœci
+(nadawca wysy³a 10 wiadomoœci,
+pierwszy odbiera np. 4, drugi 6)
+
+5. potwierdzenia			15%
+odbiorcy potwierdzaj¹ ka¿d¹ wiadomoœæ
+po 2 sekundach; nie powinni
+otrzymaæ kolejnej wiadomoœci, póki nie
+potwierdz¹ poprzedniej (najpierw uruchamiamy nadawcê,
+który wysy³a wszystkie wiadomoœci,
+póŸniej jednego odbiorcê,
+który pobiera pocz¹tkowo tylko jedn¹ wiadomoœæ,
+dopiero po kilku sekundach uruchamiamy drugiego odbiorcê,
+który powinien pobraæ kolejn¹ wiadomoœæ z kolejki)
+
+6. odpowiedzi				10%
+drugi odbiorca odpowiada na
+wiadomoœci; nadawca wypisuje na
+konsolê treœæ odpowiedzi
+
+7. publish/subscribe			20%
+1 wydawca, 2 abonentów
+wydawca wysy³a 10 wiadomoœci na
+kana³ach abc.def i abc.xyz (na przemian)
+pierwszy abonent odbiera z kana³ów
+zaczynaj¹cych siê na abc, drugi odbiera
+z kana³ów koñcz¹cych siê na xyz
+(wiadomoœci z kana³u abc.xyz powinny
+docieraæ do obu abonentów).
+
+Uwagi:
+Po zakoñczeniu zadania proszê przes³aæ wszystkie pliki kodu, konfiguracyjne (.cs, .config)
+oraz pliki wszytkich projektów i solution (pliki .csproj i .sln).
+Proszê równie¿ do³¹czyæ skompilowane pliki: exe oraz dll.
+Podstaw¹ oceny s¹ równie¿ screeny z dzia³aj¹cych programów.
+Podczas wysy³ania wiadomoœci proszê o scereen z panelu administratora RabbitMQ,
+podczas odbierania równie¿ z panelu oraz klienta.
+Proszê opró¿niæ foldery Debug i Release zostawiaj¹c jedynie pliki .exe i .dll.
+Proszê równie¿ usun¹æ folder packages oraz ukryty folder .vs.
+Pliki nale¿y spakowaæ do archiwum ZIP i wys³aæ na platformie e-nauczanie.

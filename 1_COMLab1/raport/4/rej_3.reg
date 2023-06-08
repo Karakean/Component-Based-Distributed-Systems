@@ -1,0 +1,9 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{D41B2BB6-8973-4DBD-8A92-B1A81D3F4429}]
+@="Klasa3"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{D41B2BB6-8973-4DBD-8A92-B1A81D3F4429}\InProcServer32]
+@="C:\\Users\\mipig\\Desktop\\KSR\\COMLab1\\4\\klasa3\\Debug\\klasa3.dll"
+"ThreadingModel"="Both"
+

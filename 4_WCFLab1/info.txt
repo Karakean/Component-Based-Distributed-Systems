@@ -1,0 +1,60 @@
+Program test.exe udostêpnia serwisy, z których nale¿y
+skorzystaæ w zadaniach 1 i 5 oraz testuje zadania 2 i 4.
+
+Zadania:
+1. skorzystanie z serwisu IZadanie1 (metoda Test)	15%
+   adres: net.pipe://localhost/ksr-wcf1-test
+   binding: NetNamedPipeBinding
+   plik: KSR_WCF1.dll
+   interfejs:
+   KSR_WCF1.IZadanie1 {
+	string Test(string arg);
+	void RzucWyjatek(bool czy_rzucic);
+	}
+   KSR_WCF1.Wyjatek {
+	string opis;
+	}
+
+2. wystawienie serwisu (w³asny serwer self-hosting)	20%
+   adres: localhost/ksr-wcf1-zad2
+   binding: NetNamedPipeBinding
+   plik: KSR_WCF1.dll
+   interfejs:
+   KSR_WCF1.IZadanie2 {
+	string Test(string arg);
+	}	
+
+3. udostêpnienie metadanych we w³asnym serwisie		10%
+   Zrobiæ print screen podczas wykrywania serwisu dodaj¹c odwo³anie do us³ugi.
+   W oknie Us³ugi powinien byæ widoczny udostêpniony interfejs a poni¿ej tekst, ¿e znaleziono us³ugi.
+
+4. udostêpnienie serwisu z pkt. 2 równie¿ pod		15%
+   adresem 127.0.0.1:55765
+   z bindingiem NetTcpBinding
+
+5. wywo³anie metody RzucWyjatek (IZadanie1)		20%
+   z parametrem true i wykonanie polecenia zawartego
+   w treœci wyj¹tku we w³asnym kliencie (z pkt. 1)
+
+6 i 7. dodanie do w³asnego serwera us³ugi z metod¹	20%
+   RzucWyjatek7 rzucaj¹c¹ wyj¹tek Wyjatek7
+   i z³apanie wyj¹tku we w³asnymy kliencie
+   i wypisanie jego zawartoœci
+   interfejs:
+   IZadanie7 {
+   	void RzucWyjatek7(string a, int b);
+   	}
+   Wyjatek7 {
+   	string opis;
+	string a;
+	int b;
+   	}
+
+Uwagi:
+Po zakoñczeniu zadania proszê przes³aæ wszystkie pliki kodu, konfiguracyjne (.cs, .config)
+oraz pliki wszytkich projektów i solution (pliki .csproj i .sln).
+Proszê równie¿ do³¹czyæ skompilowane pliki: exe oraz dll.
+Podstaw¹ oceny s¹ równie¿ screeny z dzia³aj¹cych wywo³añ plików test.exe, wykrywanie serwisu (zad. 3), klient7 i serwer7 (zad. 7). 
+Proszê usun¹æ foldery Debug i Release (jedynie w nadrzêdnym Release lub Debug zostawiæ pliki .exe i .dll).
+Proszê równie¿ usun¹æ ukryty folder .vs.
+Pliki nale¿y spakowaæ do archiwum ZIP i wys³aæ na platformie e-nauczanie.

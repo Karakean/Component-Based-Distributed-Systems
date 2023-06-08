@@ -1,0 +1,29 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Classes\KSR20.COM3Klasa.1]
+@="KSRLab3+Klasa"
+
+[HKEY_CURRENT_USER\Software\Classes\KSR20.COM3Klasa.1\CLSID]
+@="{82C2867A-8E32-4BB7-922A-18398DDA7F2C}"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{82C2867A-8E32-4BB7-922A-18398DDA7F2C}]
+@="KSRLab3+Klasa"
+
+[HKEY_CURRENT_USER\Software\Classes\WOW6432Node\CLSID\{82C2867A-8E32-4BB7-922A-18398DDA7F2C}\InprocServer32]
+@="mscoree.dll"
+"ThreadingModel"="Both"
+"Class"="KSRLab3+Klasa"
+"Assembly"="klasa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f1c49ac014eb768e"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="C:\\Users\\mipig\\Desktop\\KSR\\COMLab3\\1\\klasa.dll"
+
+[HKEY_CURRENT_USER\Software\Classes\WOW6432Node\CLSID\{82C2867A-8E32-4BB7-922A-18398DDA7F2C}\InprocServer32\1.0.0.0]
+"Class"="KSRLab3+Klasa"
+"Assembly"="klasa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f1c49ac014eb768e"
+"RuntimeVersion"="v4.0.30319"
+"CodeBase"="C:\\Users\\mipig\\Desktop\\KSR\\COMLab3\\1\\klasa.dll"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{82C2867A-8E32-4BB7-922A-18398DDA7F2C}\ProgId]
+@="KSR20.COM3Klasa.1"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{82C2867A-8E32-4BB7-922A-18398DDA7F2C}\Implemented Categories\{62C8FE65-4EBB-45E7-B440-6E39B2CDBF29}]

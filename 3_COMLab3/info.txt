@@ -1,0 +1,103 @@
+Klasa (klasa.dll)
+guid interfejsu: D2767A1D-7FDB-4AA1-9A69-8399F02C64EF
+guid klasy: 82C2867A-8E32-4BB7-922A-18398DDA7F2C
+ProgID klasy: KSR20.COM3Klasa.1
+interfejs:
+interface IKlasa {
+	uint Test(string s);
+	}
+
+KlasaC (klasac.dll)
+guid interfejsu: D4A18C38-507D-458F-B47F-0DF89BDEC7E4
+guid klasy: 67417A67-096F-45EE-8063-4D206F5985B5
+guid biblioteki typów: 77833C46-9178-4A0D-80B1-93202FE99A27
+
+Klasa2
+guid interfejsu: F59DA79E-29BB-476C-BFF4-2E9C0ADFDD4D
+guid klasy: F08FB011-E87D-472E-9886-659C2559FB10
+ProgID klasy: KSR20.COM3Klasa.2
+
+KlasaC2 (klasac2.dll)
+guid interfejsu: 442A7716-E106-4279-9BC0-9C1B4ED1779B
+DEFINE_GUID(<<name>>, 0x442a7716, 0xe106, 0x4279, 0x9b, 0xc0, 0x9c, 0x1b, 0x4e, 0xd1, 0x77, 0x9b);
+guid klasy: 3F7A6746-5F7C-4A1C-BA61-E2C5C79CC096
+DEFINE_GUID(<<name>>, 0x67417a67, 0x96f, 0x45ee, 0x80, 0x63, 0x4d, 0x20, 0x6f, 0x59, 0x85, 0xb5);
+guid biblioteki typów: 36021344-93CA-4F02-B0AB-3A48AD734813
+
+Zadania:
+1. rejestracja gotowego COMa napisanego w C#			10%
+   testowanie: test.exe
+   pliki:
+   - klasa.dll
+   - rej1.reg
+   - unrej1.reg
+
+2. napisanie klienta w C#, x86 (późne wiązanie)	10%
+   do COMa z pkt. 1
+   pliki:
+   - klient2.cs (do własnej implementacji)
+
+3. napisanie klienta w C++ do COMa z pkt. 1.			20%
+   (CLSCTX_ALL)
+   pliki:
+   - klient3.cpp
+   - klasa.tlb
+
+4. napisanie klienta w C# NET.Framework do COMa w C++ (klasac.dll)	20%
+   klasę należy samodzielnie zarejestrować in-process
+   testowanie: test.exe c
+   pliki:
+   - klient4.cs (do własnej implementacji, powinien zawierać metodę o sygnaturze: 'uint Test(string napis);' wołaną przez test.exe)
+   - klasac.dll
+   - rej4.reg
+   - unrej4.reg
+
+5. implementacja i rejestracja własnej klasy COM,	20%
+   C#, x86 (Klasa2)
+   assembly musi być podpisane i zarejestrowane (regasm i gacutil)
+   vtestowanie: test.exe 2
+   pliki:
+   - klasa2.cs (do własnej implementacji)
+   - rej5.reg (w przypadku rejestrecji ręcznej)
+   - unrej5.reg
+
+6. implemnetacja COMa w C++ (klasac2.dll)		10%
+   klasę należy samodzielnie zarejestrować in-process
+   pliki:
+   - IKlasa2.h
+   - klasa2.h
+   - fabryka2.h
+   - dllmain2.cpp
+   - fabryka2.cpp
+   - guid_k2.cpp
+   - klasa2.cpp
+   - IKlasa2.idl
+   - klasa2.def
+   - rej6.reg
+   - unrej6.reg
+
+7. implementacja aplikacji WPF wykorzystujęcej kontrolki ActiveX	10%
+   - wyświetlajanie pliku PDF
+   - odtwarzanie pliku WAV
+   - otwieranie strony WWW 
+
+test.exe	- test rejestracji COMa w C# (pkt. 1)
+test.exe c	- test rejestracji COMa w C++ (pkt. 4)
+test.exe 2	- test rejestracji COMa w C# (pkt. 5)
+test.exe c2	- test rejestracji COMa w C++ (pkt. 6)
+
+Uwagi:
+1. rejestrujemy tylko dla bieżącego użytkownika
+2. pliki wykonywalne należy odblokować
+   (prawym przyciskiem myszy -> właściwości -> odblokuj)
+3. system jest 64-bitowy, dll-ki są 32-bitowe
+
+Po zakończeniu zadania proszę przesłać wszystkie wyżej wymienione pliki
+oraz pliki wszytkich projektów i solution (pliki .vcxproj i .sln).
+Proszę również dołączyć skompilowane pliki: klient2.exe, klient3.exe, klient4.exe, klasa2.dll, klasac.dll.
+Podstawą oceny są również screeny z działających wywołań plików test.exe (3 przypadki), klient2.exe, klient3.exe, klient4.exe.
+Proszę usunąć z folderów Debug i Release wszytkie pliki poza .exe, .dll, .tlb, .tlh i .tli
+Proszę również usunąć ukryty folder .vs.
+Pliki należy spakować do archiwum ZIP i wysłać na platformie e-nauczanie.
+
+

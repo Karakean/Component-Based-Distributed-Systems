@@ -1,0 +1,60 @@
+1. wywo³anie asynchroniczne metody				20%
+   IZadanie1.DlugieObliczenia
+   w trakcie jej wykonania, w przeci¹gu 3 sekund nale¿y
+   wywo³aæ metodê Szybciej z parametrami (x, 3x^2 - 2x)
+   dla x = 0...20; metodê Szybciej proszê wywo³aæ
+   synchronicznie, inaczej zadanie mo¿e byæ nie zaliczone
+   adres (metadane): net.pipe://localhost/ksr-wcf2-metadane
+
+2. Wo³anie zwrotne						15%
+   nale¿y skorzystaæ z metody IZadanie2.PodajZadania
+   funkcja ta wo³a zwrotnie funkcjê
+   IZadanie2Enum.Zadanie z nazw¹ podzadania, liczb¹ punktów za nie
+   i zmienn¹ logiczn¹ opisuj¹c¹, czy podzadanie jest zaliczone
+   Proszê wypisaæ te informacje (nazwa podzadania, liczb¹ punktów i czy zaliczone)
+   w kliencie.
+   adres (metadane): net.pipe://localhost/ksr-wcf2-metadane
+
+3. Wo³anie zwrotne						15%
+   nale¿y udostêpniæ serwis IZadanie3
+   pod adresem
+   net.pipe://localhost/ksr-wcf2-zad3
+   (binding NetNamedPipeBinding)
+   obs³uga metody TestujZwrotny powinna wywo³aæ w przeci¹gu 4 sekund
+   metodê interfejsu zwrotnego WolanieZwrotne(x, x^3 - x^2) dla x=0..30
+   Uwaga: proszê uruchomiæ swój serwer bez debuggera
+
+4. Kontrola czasu ¿ycia						10%
+   nale¿y udostêpniæ serwis IZadanie4 z czasem ¿ycia PerSession
+   pod adresem
+   net.pipe://localhost/ksr-wcf2-zad4
+   (binding NetNamedPipeBinding)
+   funkcja Ustaw powinna ustawiaæ wewnêtrzny licznik na otrzymany
+   argument,
+   funkcja Dodaj powinna dodawaæ swój parametr to wewnêtrznego
+   licznika i zwracaæ wartoœæ tego licznika (po dodaniu)
+
+Uruchamiaj¹c test.exe mo¿na podaæ w pierwszym i drugim argumencie
+adresy serwisów do zadania 5 i 6 inaczej otrzymamy b³¹d (405) niedozwolona metoda.
+
+5. Uruchomienie w³asnego hostowanego serwera WCF		15%
+   implementuj¹cego interfejs IZadanie5
+   z bindingiem basicHttpBinding
+
+6. nale¿y dodatkowo udostêpniæ serwis IZadanie6 w swoim		15%
+   serwerze z bindingiem wsDualHttpBinding
+   metoda Dodaj(int a, int b) powinna wo³aæ zwrotnie
+   metodê Wynik z parametrem a + b
+
+7. Skorzystanie z obu endpointów ze swojego serwera		10%
+   w swoim kliencie
+ 
+Uwagi:
+Po zakoñczeniu zadania proszê przes³aæ wszystkie pliki kodu, konfiguracyjne (.cs, .config)
+oraz pliki wszytkich projektów i solution (pliki .csproj i .sln).
+Proszê równie¿ do³¹czyæ skompilowane pliki: exe oraz dll.
+Podstaw¹ oceny s¹ równie¿ screeny z dzia³aj¹cych wywo³añ plików test.exe (zadania od 1 do 6) i klient7 (zad. 7). 
+Proszê opró¿niæ foldery Debug i Release zostawiaj¹c jedynie pliki .exe i .dll.
+Proszê równie¿ usun¹æ ukryty folder .vs.
+Pliki nale¿y spakowaæ do archiwum ZIP i wys³aæ na platformie e-nauczanie. 
+wysy³aj¹c kod zadañ 5 i 6 nale¿y koniecznie do³¹czyæ równie¿ plik web.config

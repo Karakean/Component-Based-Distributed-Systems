@@ -1,0 +1,7 @@
+REGEDIT4
+
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{6C211F4F-B068-4F9C-B5B7-7E9A9423A64A}]
+@="klasa2"
+[HKEY_CURRENT_USER\Software\Classes\Wow6432Node\CLSID\{6C211F4F-B068-4F9C-B5B7-7E9A9423A64A}\LocalServer32]
+@="C:\\Users\\mipig\\Desktop\\KSR\\COMLab2\\4\\server2.exe"
+"ServerExecutable"="C:\\Users\\mipig\\Desktop\\KSR\\COMLab2\\4\\server2.exe"

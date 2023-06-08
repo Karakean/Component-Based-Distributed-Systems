@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Builder
+@model List<string>
+
+@{
+    ViewData["Title"] = "Rented books";
+    //var rentedBooks = (List<string>) @ViewData["rentedBooks"];
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Returend list from the library service: </h2>
+        <ul>
+            @foreach (var book in @Model)
+            {
+                <li> @book </li>   
+            }
+        </ul>
+    </div>
+</div>

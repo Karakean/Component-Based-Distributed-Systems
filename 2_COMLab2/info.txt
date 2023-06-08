@@ -1,0 +1,86 @@
+UWAGA:
+- po wypakowaniu plików nale¿y klikn¹æ prawym przyciskiem myszy na plikach exe i dll, wybraæ w³aœciwoœci i klikn¹æ "Odblokuj"
+ - wszystkie dll-ki s¹ 32-bitowe (co mo¿na sprawdziæ za pomoc¹ sigcheck64.exe)
+ - podczas rejestracji nale¿y wzi¹æ pod uwagê czy system operacyjny jest 32 czy 64-bitowy
+ - klasy proszê rejestrowaæ tylko dla bie¿¹cego u¿ytkownika
+   (na stanowiskach labortoryjnych nie ma uprawnieñ do rejestrowania dla wszystkich)
+
+Klasa:
+guid klasy = 23E86DCB-EE9F-44DE-B37B-D30BABD1B58C
+CLSID_Klasa = { 0x23e86dcb, 0xee9f, 0x44de, 0xb3, 0x7b, 0xd3, 0xb, 0xab, 0xd1, 0xb5, 0x8c };
+guid interfejsu = 09726F06-F81E-4F8A-99E2-21CC845D665A
+IID_IKlasa = { 0x9726f06, 0xf81e, 0x4f8a, 0x99, 0xe2, 0x21, 0xcc, 0x84, 0x5d, 0x66, 0x5a };
+guid proxy = 1434095E-4E29-4AD1-8784-0652813BD9D7}
+PROXY_CLSID_IS = { 0x1434095e, 0x4e29, 0x4ad1, { 0x87, 0x84, 0x6, 0x52, 0x81, 0x3b, 0xd9, 0xd7 } };
+ProgID = KSR20.Klasa.1
+
+Klasa2:
+guid klasy = 6C211F4F-B068-4F9C-B5B7-7E9A9423A64A
+CLSID_Klasa2 = { 0x6c211f4f, 0xb068, 0x4f9c, 0xb5, 0xb7, 0x7e, 0x9a, 0x94, 0x23, 0xa6, 0x4a };
+guid interfejsu = AFEAC528-6033-4E9B-85D7-36EBE56A4A81
+GUID IID_IKlasa2 = { 0xafeac528, 0x6033, 0x4e9b, 0x85, 0xd7, 0x36, 0xeb, 0xe5, 0x6a, 0x4a, 0x81 };
+guid proxy = 08B8D49E-E421-4A23-BFB8-184439F98DC6
+PROXY_CLSID_IS = { 0x8b8d49e, 0xe421, 0x4a23, { 0xbf, 0xb8, 0x18, 0x44, 0x39, 0xf9, 0x8d, 0xc6 } };
+
+zadania:
+1. rejestracja serwera (pliki *.reg) i proxy Klasy (regsvr32)	10% + 10%
+   testowanie: test.exe
+   pliki:
+   - server.exe
+   - proxyStub.dll
+   - rej.reg/rej64.reg + unrej.reg/unrej64.reg
+   - rejproxy.reg/rejproxy64.reg + unrejproxy64.reg
+2. nadanie ProgID Klasie (KSR20.Klasa.1)	10%
+   testowanie: test.exe p
+   pliki:
+   - setprogid.reg
+   - unsetprogid.reg
+3. klient Klasy					10%
+   pliki:
+   - client.cpp
+   - guid_k1.cpp
+   - Iklasa.h
+4. proxyStub dla IKlasa2
+   - implementacja i rejestracja proxy		20%
+   testowanie: test.exe 2 (wymagane jest wczeœniejsze zarejestrowanie proxyStub2.dll i server2.exe)
+   pliki:
+   - Klasa2.idl
+   - proxyStub2.def
+   - rejproxy2.reg / rejproxy2_64.reg
+   - unrejproxy2.reg / unrejproxy2_64.reg
+   - server2.exe
+   - proxyStub2.dll (pozwala sprawdziæ poprawnoœæ rejestreacji proxy)
+5. serwer dla Klasy2
+   - implementacja klasy			15%
+   - implementacja i rejestracja serwera	15%
+   testowanie: test.exe 2
+   pliki:
+   - IKlasa2.h
+   - Klasa2.h
+   - Klasa2.cpp
+   - fabryka2.cpp
+   - guid_k2.cpp
+   - server2.cpp
+   - rej2.reg / rej2_64.reg
+   - unrej2.reg / unrej2_64.reg
+6. klient do Klasy2			10%
+   pliki:
+   - client2.cpp
+   - guid_k2.cpp
+   - Iklasa2.h
+
+Uwagi:
+1. rejestrujemy tylko dla bie¿¹cego u¿ytkownika
+2. pliki wykonywalne nale¿y odblokowaæ
+   (prawym przyciskiem myszy -> w³aœciwoœci -> odblokuj)
+3. zalecany jest ssytem 64-bitowy, dll-ki s¹ 32-bitowe
+4. serwer proszê umieœciæ w apartamencie wielow¹tkowym
+5. proxy do Klasy2 proszê skompilowaæ w trybie Release
+
+Po zakoñczeniu zadania proszê przes³aæ wszystkie wy¿ej wymienione pliki
+oraz pliki wszytkich projektów i solution (pliki .vcxproj i .sln).
+Proszê równie¿ do³¹czyæ skompilowane pliki: test2.exe, server2.exe oraz proxyStub2.dll.
+Podstaw¹ oceny s¹ równie¿ screeny z dzia³aj¹cych wywo³añ plików test.exe (3 przypadki), client.exe oraz client2.exe.
+Jako oczyszczony projekt proszê wys³aæ tylko pliki: (*.sln, *.vcxproj, *.vcxproj.filters, *.vcxproj.user).
+Nie przesy³ac zawartoœci folderów: Debug, Release oraz ukrytego folderu .vs, chyba, ¿e zaznaczono inaczej !!!
+Pliki nale¿y spakowaæ do archiwum ZIP i wys³aæ na platformie e-nauczanie.
